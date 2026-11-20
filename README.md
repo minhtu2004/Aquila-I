@@ -60,3 +60,7 @@ DMA supports SRAM copies, SRAM-to-CRC transfers, CRC result writeback, and AES t
 See [verification and physical results](docs/verification.md) for the scope, recorded waveforms, and limits on reproducing the thesis run.
 
 The [thesis excerpt (Vietnamese PDF)](docs/thesis-chapters-3-4-vi.pdf) contains Chapters 3 and 4, covering the SoC design, verification, and physical implementation.
+
+## License
+
+The [MIT license](LICENSE) applies to Aquila-I's original code. Upstream components retain the terms in [third-party notices](docs/third-party.md). The thesis excerpt and figures retain their original rights and are outside the scope of the MIT code license.
