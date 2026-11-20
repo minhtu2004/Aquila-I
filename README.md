@@ -4,6 +4,17 @@ Aquila-I is a 32-bit RISC-V SoC built around PicoRV32. It integrates an AXI4-Lit
 
 ![Aquila-I block diagram](docs/images/soc-architecture.png)
 
+## IP credits
+
+Thanks to the authors and maintainers of the cores used in Aquila-I:
+
+- **CPU:** [PicoRV32](https://github.com/YosysHQ/picorv32) by Claire Xenia Wolf.
+- **I²C:** The master core and AXI-Stream FIFO from Alex Forencich's [verilog-i2c](https://github.com/alexforencich/verilog-i2c).
+- **SPI:** The master core adapted from Russell Merrick's [Nandland SPI Master](https://github.com/nandland/spi-master).
+- **UART:** The UART core, RX, and TX modules adapted from Alex Forencich's [verilog-uart](https://github.com/alexforencich/verilog-uart).
+
+Aquila-I integrates the serial cores behind APB register interfaces. The thesis layout also uses a [VLSIDA SKY130 SRAM macro](https://github.com/VLSIDA/sky130_sram_macros). See [third-party notices](docs/third-party.md) for the source files and license terms.
+
 ## Run the RTL regression
 
 On Linux, install GNU Make, Python 3, Icarus Verilog (including `vvp`), and the bare-metal RISC-V GCC and binutils. The default cross-tool prefix is `riscv64-unknown-elf-`. Set `RISCV_PREFIX` when using a differently named toolchain with RV32I/ILP32 support.
@@ -46,6 +57,6 @@ DMA supports SRAM copies, SRAM-to-CRC transfers, CRC result writeback, and AES t
 | Post-layout GLS | The thesis run recorded PASS for ROM boot/UART output and one AES-128 vector in both directions, at zero delay and at 18 ns with SDF maximum delays. |
 | Timing and layout | The thesis reports setup/hold met for constrained top-level paths at 18 ns, zero DRC/LVS errors, and remaining electrical and antenna violations. |
 
-See [verification and physical results](docs/verification.md) for the scope, recorded waveforms, and limits on reproducing the thesis run. See [third-party notices](docs/third-party.md) for imported IP.
+See [verification and physical results](docs/verification.md) for the scope, recorded waveforms, and limits on reproducing the thesis run.
 
 The [thesis excerpt (Vietnamese PDF)](docs/thesis-chapters-3-4-vi.pdf) contains Chapters 3 and 4, covering the SoC design, verification, and physical implementation.
