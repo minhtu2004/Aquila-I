@@ -1,0 +1,14 @@
+/build/
+*.elf
+*.hex
+*.vvp
+*.vcd
+*.fst
+*.log
+*.sdf
+*.spef
+*.gds
+*.odb
+*.lef
+*.lib
+__pycache__/
