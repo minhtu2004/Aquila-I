@@ -47,3 +47,5 @@ DMA supports SRAM copies, SRAM-to-CRC transfers, CRC result writeback, and AES t
 | Timing and layout | The thesis reports setup/hold met for constrained top-level paths at 18 ns, zero DRC/LVS errors, and remaining electrical and antenna violations. |
 
 See [verification and physical results](docs/verification.md) for the scope, recorded waveforms, and limits on reproducing the thesis run. See [third-party notices](docs/third-party.md) for imported IP.
+
+The [thesis excerpt (Vietnamese PDF)](docs/thesis-chapters-3-4-vi.pdf) contains Chapters 3 and 4, covering the SoC design, verification, and physical implementation.
